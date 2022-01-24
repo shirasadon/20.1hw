@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    $(function(){
+        fetch('http://localhost:3000//all-students')
+  .then(response => response.json())
+  .then(data => console.log(data));
+  
+    
+    $.get("student-name", function(data, status){
+    alert("Data: " + data + "Status: " + status);
+  });
+
+  fetch('http://localhost:3000//name')
+  .then(response => response.json())
+  .then(data => console.log(data.name));
+
+
+fetch('http://localhost:3000//delete-student-name',{ method: 'DELETE'})
+  .then(response => response.json())
+  .then(data => console.log(data.name));
+ 
+})
+
+$.ajax({
+    url: '/http://localhost:3000//student-id',
+    type: 'DELETE',
+    success: function(result) {
+       console.log(result);
+    }
+});
+</script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</body>
+</html>
