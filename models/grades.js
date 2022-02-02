@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
-
 const gradesSchema = Schema({
  student_id: {
     type: Schema.Types.ObjectId,
